@@ -15,7 +15,14 @@ spec:
       labels:
         app: qod-api
     spec:
-      containers:
+      - containers:
+          resources:
+            limits:
+              cpu: 10m
+              memory: 28Mi
+            requests:
+              cpu: 10m
+              memory: 28Mi
         - name: qod-api
           image: ibmicpcoc/qod-api
           ports:
@@ -31,10 +38,4 @@ spec:
               value: root
           imagePullPolicy: Always
       restartPolicy: Always
-resources:
-          limits:
-            cpu: 10m
-            memory: 28Mi
-          requests:
-            cpu: 10m
-            memory: 28Mi
+
