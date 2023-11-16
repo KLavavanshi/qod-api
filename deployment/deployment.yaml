@@ -18,11 +18,11 @@ spec:
       - containers:
           resources:
             limits:
-              cpu: 10m
-              memory: 28Mi
+              cpu: 5m
+              memory: 18Mi
             requests:
-              cpu: 10m
-              memory: 28Mi
+              cpu: 5m
+              memory: 18Mi
         - name: qod-api
           image: ibmicpcoc/qod-api
           ports:
